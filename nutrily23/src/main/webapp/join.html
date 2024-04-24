@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link href="./signup.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/Join.css">
+    <style>
+        .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*{
+    box-sizing: border-box;
+}
+.background{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.outer__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 670px;
+    height: 1700px;
+    box-shadow: 7px 7px 39px 0px #27bd0840;
+    border-radius: 20px;
+    border: 1px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 470px;
+    height: 90%;
+}
+
+.wrapper-size{
+    width: 466px !important;
+    height: 12.8% !important;
+}
+
+.wrapper__head{
+    width: 466px;
+    height: 20px !important;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 47.36px;
+    color: limegreen;
+}
+.wrapper__name{
+    display: flex;
+    flex-direction: column;
+    width : 466px;
+    height: 80px;
+}
+.wrapper__id{
+    display: flex;
+    flex-direction: column;
+    width : 466px;
+    height: 80px;
+}
+
+.wrapper__password{
+    display: flex;
+    flex-direction: column;
+    width : 466px;
+    height: 80px;
+}
+
+.wrapper__password__check{
+    display: flex;
+    flex-direction: column;
+    width : 466px;
+    height: 80px;
+}
+.wrapper__height{
+    display: flex;
+    flex-direction: column;
+    width : 466px;
+    height: 80px;
+}
+.wrapper__weight{
+    display: flex;
+    flex-direction: column;
+    width : 466px;
+    height: 80px;
+}
+.wrapper__birth{
+    display: flex;
+    flex-direction: column;
+    width : 466px;
+    height: 80px;
+}
+.wrapper__etc{
+    display: flex;
+    flex-direction: column;
+    width : 466px;
+    height: 80px;
+}
+
+.input{
+    width: 466px;
+    height: 56px;
+    border-width: 0px;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+    border:1px solid gray;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.input-pd{
+    padding-top: 17px;
+}
+[type="checkbox"]{
+    appearance: none;
+    border: 1px solid gray;
+    width: 1.25em;
+    height: 1.25em;
+    margin:0 0 2px; 
+    padding:0;
+    vertical-align:middle;
+}
+
+[type="checkbox"]:not :checked{
+    border-color: gray;
+}
+
+[type="checkbox"]:checked {
+    border: 0.4em solid limegreen;
+}
+
+.input:focus{
+    outline: none;
+    border: 2px solid green;
+}
+
+.wrapper__gender{
+    flex-direction: row;
+    width: 466px;
+    height: 88px;
+}
+
+.gender__radio{
+    display: flex;
+    flex-direction: row;
+    width: 55px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+}
+
+[type="radio"]{
+    appearance: none;
+    border: 1px solid gray;
+    border-radius: 50%;
+    width: 1.25em;
+    height: 1.25em;
+    margin:0 0 2px; 
+    padding:0;
+    vertical-align:middle;
+}
+
+[type="radio"]:not :checked{
+    border-color: gray;
+}
+
+[type="radio"]:checked {
+    border: 0.4em solid limegreen;
+}
+
+.wrapper__join{
+    width: 470px;
+    height: 75px;
+}
+
+.join__button{
+    width: 470px;
+    height: 75px;
+    border: 1px solid green;
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: green;
+    cursor: pointer;
+}
+
+.join__button:hover{
+    width: 470px;
+    height: 75px;
+    border: 1px solid #ffffff;
+    background-color: limegreen;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.join__button:focus{
+    width: 470px;
+    height: 75px;
+    border: 1px solid #ffffff;
+    background-color: green;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="logo">
+            <a href="Main.html" title="뉴트릴리 홈페이지"><img src="./img/logo-remove.png" class="image" style="margin-top: 20px; margin-bottom: 20px; width: 300px; height: auto;"></a>
+         </div>
+    <div class="background">
+        <div class="outer__box">
+            <div class="wrapper">
+                <div class="wrapper__head wrapper-size">회원가입</div>
+                <div class="wrapper__name">
+                    <label id="input__label" for="input">이름</label>
+                    <input class="input" type="text" placeholder="이름을 입력하세요.">
+                </div>
+                <div class="wrapper__id">
+                    <label id="input__label" for="input">아이디</label>
+                    <input class="input" type="text" placeholder="아이디를 입력하세요.">
+                </div>
+                <div class="wrapper__password">
+                    <label id="input__label" for="input">비밀번호</label>
+                    <input class="input" type="password" placeholder="비밀번호를 입력하세요.">
+                </div>
+                <div class="wrapper__password__check">
+                    <label id="input__label" for="input">비밀번호 확인</label>
+                    <input class="input" type="password" placeholder="비밀번호를 입력하세요.">
+                </div>
+                <div class="wrapper__gender" >
+                    <label id="input__label" for="input">성별</label>
+                    <div style="display: flex; border: 1px solid gray; border-radius: 5px; padding-left: 10px; margin-top: 5px;">
+                    <div class="gender__radio" >
+                        <input type="radio" name="gender">남성
+                    </div>
+                    <div class="gender__radio">
+                    <input type="radio" name="gender">여성
+                    </div>
+                </div>
+                </div>
+                <div class="wrapper__height">
+                    <label id="input__label" for="input">키</label>
+                    <input class="input" type="text" placeholder="키를 입력하세요.">
+                </div>
+                <div class="wrapper__weight">
+                    <label id="input__label" for="input">몸무게</label>
+                    <input class="input" type="text" placeholder="몸무게를 입력하세요.">
+                </div>
+                <div class="wrapper__birth">
+                    <label id="input__label" for="input">생년월일</label>
+                    <input class="input" type="date">
+                </div>
+                <div class="wrapper__etc">
+                    <label id="input__label" for="input">기타</label>
+                    <div class="input input-pd">
+                        <input type="checkbox" name="etc">비건
+                        <input type="checkbox" name="etc">헬스
+                        <input type="checkbox" name="etc">다이어트
+                    </div>
+                </div>
+                <div class="wrapper__join">
+                    <button class="join__button">가입하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

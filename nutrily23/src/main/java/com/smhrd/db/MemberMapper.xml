@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.smhrd.db.MemberMapper">
+
+	<!--  회원가입-->
+	<insert id ="join" parameterType="Member">
+		insert into member_info 
+		values(#{mem_id}, #{mem_pw}, #{mem_name}, #{mem_height}, #{mem_weight}, 
+		#{mem_gender}, #{mem_birthdate}, 
+		#{vegan}, #{health}, #{diet}, #{allergy},
+		#{gout}, #{diabetes}, #{lactose}, #{hyperlipidemia}, sysdate )	
+	</insert>
+	
+	<!-- 로그인  -->
+	<select id ="login" parameterType="Member" resultType="Member">
+		select * from member_info where mem_id=#{mem_id} and mem_pw=#{mem_pw}
+	</select>
+	
+	<select id="memberList" resultType="Member">
+		select * from member_info order by join_at asc 
+		
+
+	</select>
+
+
+
+</mapper>
+
+
+
+
+
