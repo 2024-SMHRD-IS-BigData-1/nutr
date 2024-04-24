@@ -25,9 +25,8 @@ public class Board {
 	private String b_view;
 	private String b_like;
 	
-	private String mem_id;
+	@NonNull private String mem_id;
 	
-	@NonNull private String b_writer;
 	
 	
 	

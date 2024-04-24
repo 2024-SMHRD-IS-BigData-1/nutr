@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"  isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,12 +14,16 @@
 
 	<form action="BoardWrite" method="post" enctype="multipart/form-data">
 	
+		
+		
+		
+		<c:choose>
+			<c:when test="${!empty loginMember}">
+				작성자 <b>${loginMember.mem_id} 님</b> 
+			</c:when>
+		</c:choose>
+		<br>
 		제목입력 <input type="text" name="b_title" ><br>
-		
-		<!-- 로그인했을 경우 로그인한 아이디(이름)이 뜨게 할 것  -->
-		작성자 <input type="text" name="b_writer"><br>
-		가입된 아이디일경우 <input type="text" name="mem_id"><br>
-		
 		
 	    카테고리 선택
 		 <select name="b_category" >
@@ -34,9 +39,7 @@
 		<textarea name="b_content" cols="50" rows="10" sytle="resize: none;"></textarea> <br>  
 		<input type="reset" value="초기화">
 		<input type="submit" value="작성하기">
-	
-		
-					
+			
 	
 	</form>
 

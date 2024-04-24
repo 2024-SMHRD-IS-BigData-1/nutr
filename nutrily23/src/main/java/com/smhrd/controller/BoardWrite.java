@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
@@ -30,14 +31,16 @@ public class BoardWrite extends HttpServlet {
 	multi = new MultipartRequest(request, path, maxSize, encoding, rename);
 		
 	String b_title = multi.getParameter("b_title");
+	
 	String b_content = multi.getParameter("b_content");
 	String b_category = multi.getParameter("b_category");
 	String b_file = multi.getFilesystemName("b_file");
 	
-	String b_writer = multi.getParameter("b_writer");
+	
+	
 	String mem_id = multi.getParameter("mem_id");
 	
-	System.out.println(b_title+b_writer+b_content+b_category+ b_file+mem_id);
+	System.out.println(b_title+b_content+b_category+ b_file+mem_id);
 	
 	Board board = new Board(b_title, b_content, b_category, b_file, mem_id);
 

@@ -12,67 +12,121 @@
 
 	<button><a href="logOut">로그아웃</a></button>
 	
+	
 	<c:choose>
-		<c:when test="${!empty loginMember} }">
-		
-		
+		<c:when test="${!empty loginMember}">
+			<button><a href="boradWrite.jsp">게시판 작성</a></button>
 		</c:when>
-		
 	</c:choose>
 	
 	
 	
-	<button><a href="boradWrite.jsp">게시판 작성</button>
 
 	<!-- 회원데이터 두가지형식으로 넘김  -->
-	회원아이디 
-	${loginMember.mem_id} 
-	비번 
-	${loginMember.mem_pw} 
-	이름 
-	${loginMember.mem_name} 
-	생년월일
-	${loginMember.mem_birthdate}
-	키
-	${loginMember.mem_height}
-	나이
-	${loginMember.mem_weight}
 	
-	<br>
-	성별 
 	
-	<%-- 
-	${loginMember.mem_gender} 
-		0==남자, 1==여자	 
-	--%>
+	<table border="1">
+		<tr>
+			<td>회원아이디 </td>
+			<td>${loginMember.mem_id} </td>
+		</tr>	
+		<tr>
+			<td>회원아이디 </td>
+			<td>${loginMember.mem_id} </td>
+		</tr>	
+		<tr>
+			<td>비번</td>
+			<td>${loginMember.mem_pw}</td>
+		</tr>	
+		<tr>
+			<<td>이름</td>
+			<td>${loginMember.mem_name}</td>
+		</tr>	
+		<tr>
+			<td>생년월일</td>
+			<td>${loginMember.mem_birthdate}</td>
+		</tr>	
+		<tr>
+			<td>키</td>
+			<td>${loginMember.mem_height}</td>
+		</tr>	
+		<tr>
+			<td>체중</td>
+			<<td>${loginMember.mem_weight}</td>
+		</tr>	
+		<tr>
+			<td>성별</td>
+			<!-- 0남 1 여 -->
+			<td><c:choose>
+					<c:when test="${loginMember.mem_gender == 0}">
+					남
+					</c:when>
+						<c:otherwise>
+						여	
+						</c:otherwise>	
+				</c:choose>
+			</td>
+		</tr>	
+		<tr>
+			<td>가입일</td>
+			<td>${loginMember.join_at}</td>
+		</tr>	
+			
+	
 
-	<br>
-	<c:choose>
-		<c:when test="${loginMember.mem_gender == 0}">
-		남
-		</c:when>
-		<c:otherwise>
-		여	
-		</c:otherwise>	
-	</c:choose>
+	
+	</table>
+	
+	
+	 
+		1 있음, 0 없음
+	<table border="1">
+		
+		<tr>
+			<td>비건</td>
+			<td>${loginMember.vegan}</td>
+		<tr>
+		<tr>
+			<td>헬스</td>
+			<td>${loginMember.health}</td>
+		<tr>
+		<tr>
+			<td>다이어트</td>
+			<td>${loginMember.diet}</td>
+		<tr>
+		<tr>
+			<td>알러지</td>
+			<td>${loginMember.allergy}</td>
+		<tr>
+		<tr>
+			<td>통풍</td>
+			<td>${loginMember.gout}</td>
+		<tr>
+		<tr>
+			<td>당뇨</td>
+			<td>${loginMember.diabetes}</td>
+		<tr>
+		<tr>
+			<td>유당불내증</td>
+			<td>${loginMember.lactose}</td>
+		<tr>
+		<tr>
+			<td>고지혈증</td>
+			<td>${loginMember.hyperlipidemia}</td>
+		<tr>
+		
+		
+	</table>
 	
 	
 	
-	<br>
-	정보 (0 없음, 1 있음)<br>
- 	비건${loginMember.vegan}
-	운동${loginMember.health}
+
 	
-	다이어트${loginMember.diet}
-	알러지${loginMember.allergy}
-	통풍${loginMember.gout}
-	당뇨${loginMember.diabetes}
-	유당불내증${loginMember.lactose}
-	고지혈증${loginMember.hyperlipidemia}
-	<br>
+	
+	
 	
 	가입일<br>
-	 ${loginMember.join_at}
+	
 	 
 	<br>
 	회원전체정보
