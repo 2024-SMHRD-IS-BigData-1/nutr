@@ -20,6 +20,8 @@
 		<c:choose>
 			<c:when test="${!empty loginMember}">
 				작성자 <b>${loginMember.mem_id} 님</b> 
+			<input name="mem_id" value="${loginMember.mem_id}">
+				
 			</c:when>
 		</c:choose>
 		<br>

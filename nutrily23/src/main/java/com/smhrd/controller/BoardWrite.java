@@ -36,9 +36,17 @@ public class BoardWrite extends HttpServlet {
 	String b_category = multi.getParameter("b_category");
 	String b_file = multi.getFilesystemName("b_file");
 	
-	
-	
 	String mem_id = multi.getParameter("mem_id");
+	
+	
+	
+//	
+//	HttpSession session = request.getSession();
+//	String mem_id = (String)session.getAttribute("mem_id");
+	
+	
+	
+	
 	
 	System.out.println(b_title+b_content+b_category+ b_file+mem_id);
 	
