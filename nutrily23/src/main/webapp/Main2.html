@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/9e1b042d62.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Main.css">
+    <title>Nutrily</title>
+</head>
+<html>
+    <body>
+        <header>
+            <div class="container">
+                <input type="checkbox" name="" id="check">
+                
+                <div class="logo-container">
+                    <a href="Main.html"><img src="img/logo.png" style="height: 65px; width:160px;"></a>
+                </div>
+
+                <div class="nav-btn">
+                    <div class="nav-links">
+                        <ul>
+                            <li class="nav-link" style="--i: .6s">
+                                <a href="#">ABOUT US</a>
+                            </li>
+                            <li class="nav-link" style="--i: .85s">
+                                <a href="#">SURVICE<i class="fas fa-caret-down"></i></a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link">
+                                            <a href="#">레시피</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                            <a href="#">식재료</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                            <a href="#">구매 비교<i class="fas fa-caret-down"></i></a>
+                                            <div class="dropdown second">
+                                                <ul>
+                                                    <li class="dropdown-link">
+                                                        <a href="#">도구</a>
+                                                    </li>
+                                                    <li class="dropdown-link">
+                                                        <a href="#">식재료</a>
+                                                    </li>
+                                                    <li class="dropdown-link">
+                                                        <a href="#">가공식품</a>
+                                                    </li>
+                                                    <div class="arrow"></div>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-link" style="--i: 1.1s">
+                                <a href="#">COMMUNITY<i class="fas fa-caret-down"></i></a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link">
+                                            <a href="#">건강 소식지</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                            <a href="#">이번주 식재료 대회</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                            <a href="#">질문, 리뷰, 팁</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-link" style="--i: 1.35s">
+                                <a href="#">CUSTOMER SURVICE</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="log-sign" style="--i: 1.8s">
+                        <a href="./Login.html" class="btn transparent">Log in</a>
+                        <a href="./Join.html" class="btn solid">Sign up</a>
+                    </div>
+                </div>
+
+                <div class="hamburger-menu-container">
+                    <div class="hamburger-menu">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <div class = "wrap"> 
+            <div class = "wrapper-section1">
+              <div class = "wrapper-title">
+                <div class = "title"><b>오늘의 건강소식!</b></div>
+              </div>
+              <div class = "section1">
+                <div class = "section1-1"><b>키워드 제목</b></div>
+                <div class = "section1-2"><img src="./img/img2.jpg"></div>
+              </div>
+            </div>
+            <div class = "wrapper-section2">
+              <div class = "wrapper-title">
+                <div class = "title"><b>회원님에게만 알려드려요!</b></div>
+              </div>
+              <div class = "section2">
+                <div class = "section1-1"><b>키워드 제목</b></div>
+                <div class = "section1-2"><img src="./img/img1.jpg"></div>
+              </div>
+            </div>
+            <div class="wrapper-section3">
+              <div class = "wrapper-title">
+                <div class = "title"><b>쉿! 회원님 맞춤 상품이에요!</b></div>
+              </div>
+            </div>
+            <div id="slideShow">
+              <ul class="slides">
+                <li><div><img src="./img/img1.jpg" alt=""><p><b>상품1</b></p>내용</div></li>
+                <li><div><img src="./img/img2.jpg" alt=""><p><b>상품2</b></p>내용</div></li>
+                <li><div><img src="./img/img3.jpg" alt=""><p><b>상품3</b></p>내용</div></li>
+                <li><div><img src="./img/img4.jpg" alt=""><p><b>상품4</b></p>내용</div></li>
+                <li><div><img src="./img/img5.jpg" alt=""><p><b>상품5</b></p>내용</div></li>
+                <li><div><img src="./img/img6.jpg" alt=""><p><b>상품6</b></p>내용</div></li>
+              </ul>  
+              <p class="controller">
+                
+                <!-- &lang: 왼쪽 방향 화살표
+                &rang: 오른쪽 방향 화살표 -->
+                <span class="prev"><i class="fa-solid fa-arrow-left"></i></span>  
+                <span class="next"><i class="fa-solid fa-arrow-right"></i></span>
+              </p>
+            </div>
+
+            <div class="wrapper-section3">
+              <div class = "wrapper-title">
+                <div class = "title"><b>쉿! 회원님 맞춤 레시피에요!</b></div>
+              </div>
+            </div>
+            <div id="slideShow">
+              <ul class="slides1">
+                <li><div><img src="./img/img1.jpg" alt=""><p><b>레시피1</b></p>내용</div></li>
+                <li><div><img src="./img/img2.jpg" alt=""><p><b>레시피2</b></p>내용</div></li>
+                <li><div><img src="./img/img3.jpg" alt=""><p><b>레시피3</b></p>내용</div></li>
+                <li><div><img src="./img/img4.jpg" alt=""><p><b>레시피4</b></p>내용</div></li>
+                <li><div><img src="./img/img5.jpg" alt=""><p><b>레시피5</b></p>내용</div></li>
+                <li><div><img src="./img/img6.jpg" alt=""><p><b>레시피6</b></p>내용</div></li>
+              </ul>  
+              <p class="controller">
+                
+                <!-- &lang: 왼쪽 방향 화살표
+                &rang: 오른쪽 방향 화살표 -->
+                <span class="prev1"><i class="fa-solid fa-arrow-left"></i></span>  
+                <span class="next1"><i class="fa-solid fa-arrow-right"></i></span>
+              </p>
+            </div>
+
+            <div class="wrapper-section3">
+              <div class = "wrapper-title">
+                <div class = "title"><b>요일별 레시피</b></div>
+              </div>
+            </div>
+            <div id="slideShow">
+              <ul class="slides2">
+                <li><div><img src="./img/img1.jpg" alt=""><p><b>레시피1</b></p>내용</div></li>
+                <li><div><img src="./img/img2.jpg" alt=""><p><b>레시피2</b></p>내용</div></li>
+                <li><div><img src="./img/img3.jpg" alt=""><p><b>레시피3</b></p>내용</div></li>
+                <li><div><img src="./img/img4.jpg" alt=""><p><b>레시피4</b></p>내용</div></li>
+                <li><div><img src="./img/img5.jpg" alt=""><p><b>레시피5</b></p>내용</div></li>
+                <li><div><img src="./img/img6.jpg" alt=""><p><b>레시피6</b></p>내용</div></li>
+              </ul>  
+              <p class="controller">
+                
+                <!-- &lang: 왼쪽 방향 화살표
+                &rang: 오른쪽 방향 화살표 -->
+                <span class="prev2"><i class="fa-solid fa-arrow-left"></i></span>  
+                <span class="next2"><i class="fa-solid fa-arrow-right"></i></span>
+              </p>
+            </div>
+
+            <div class="wrapper-section3">
+              <div class = "wrapper-title">
+                <div class = "title"><b>소중한 회원님을 위해 꼼꼼하게 준비했어요!</b></div>
+              </div>
+            </div>
+            <div id="slideShow">
+              <ul class="slides3">
+                <li><div><img src="./img/img1.jpg" alt=""><p><b>상품1</b></p>내용</div></li>
+                <li><div><img src="./img/img2.jpg" alt=""><p><b>상품2</b></p>내용</div></li>
+                <li><div><img src="./img/img3.jpg" alt=""><p><b>상품3</b></p>내용</div></li>
+                <li><div><img src="./img/img4.jpg" alt=""><p><b>상품4</b></p>내용</div></li>
+                <li><div><img src="./img/img5.jpg" alt=""><p><b>상품5</b></p>내용</div></li>
+                <li><div><img src="./img/img6.jpg" alt=""><p><b>상품6</b></p>내용</div></li>
+              </ul>  
+              <p class="controller">
+                
+                <!-- &lang: 왼쪽 방향 화살표
+                &rang: 오른쪽 방향 화살표 -->
+                <span class="prev3"><i class="fa-solid fa-arrow-left"></i></span>  
+                <span class="next3"><i class="fa-solid fa-arrow-right"></i></span>
+              </p>
+            </div>
+        </div>
+
+
+            <footer>
+        
+                <div class="waves">
+                <div class="wave" id="wave1"></div>
+                </div>
+    
+                <ul class="social-icon">
+                <li><a class="fab fa-instagram" href="https://www.instagram.com/"></a></li>
+                <li><a class="fab fa-youtube" href="https://www.youtube.com/"></a></li>
+                <li><a class="fab fa-facebook" href="https://www.facebook.com/"></a></li>
+                <li><a class="fab fa-twitter" href="https://twitter.com/?lang=ko"></a></li>
+                </ul>
+            
+                <ul class="menu_footer">
+                <li><a href="/Main.html">Home</a></li>
+                <li><a href="/details/about-contact-us.html">About Us</a></li>
+                <li><a href="/details/privacypolicy.html">Privacy Policy</a></li>
+                <li><a href="/details/customer service.html">customer service</a></li>
+                </ul>
+            
+                <p>ⒸNutrily</p>
+            
+            </footer>
+            <script>
+              const slides = document.querySelector('.slides'); //전체 슬라이드 컨테이너
+              const slideImg = document.querySelectorAll('.slides li'); //모든 슬라이드들
+              let currentIdx = 0; //현재 슬라이드 index
+              const slideCount = slideImg.length; // 슬라이드 개수
+              const prev = document.querySelector('.prev'); //이전 버튼
+              const next = document.querySelector('.next'); //다음 버튼
+              const slideWidth = 500; //한개의 슬라이드 넓이
+              const slideMargin = 100; //슬라이드간의 margin 값
+          
+              //전체 슬라이드 컨테이너 넓이 설정
+              slides.style.width = (slideWidth + slideMargin) * slideCount + 'px';
+          
+              function moveSlide(num) {
+              slides.style.left = -num * 1500 + 'px';
+              currentIdx = num;
+              }
+          
+              prev.addEventListener('click', function () {
+              /*첫 번째 슬라이드로 표시 됐을때는 
+              이전 버튼 눌러도 아무런 반응 없게 하기 위해 
+              currentIdx !==0일때만 moveSlide 함수 불러옴 */
+          
+              if (currentIdx !== 0) moveSlide(currentIdx - 1);
+              });
+          
+              next.addEventListener('click', function () {
+              /* 마지막 슬라이드로 표시 됐을때는 
+              다음 버튼 눌러도 아무런 반응 없게 하기 위해
+              currentIdx !==slideCount - 1 일때만 
+              moveSlide 함수 불러옴 */
+              if (currentIdx !== slideCount/3 - 1) {
+                  moveSlide(currentIdx + 1);
+              }
+              });
+
+              const slides1 = document.querySelector('.slides1'); //전체 슬라이드 컨테이너
+              const slideImg1 = document.querySelectorAll('.slides1 li'); //모든 슬라이드들
+              let currentIdx1 = 0; //현재 슬라이드 index
+              const slideCount1 = slideImg1.length; // 슬라이드 개수
+              const prev1 = document.querySelector('.prev1'); //이전 버튼
+              const next1 = document.querySelector('.next1'); //다음 버튼
+              const slideWidth1 = 500; //한개의 슬라이드 넓이
+              const slideMargin1 = 100; //슬라이드간의 margin 값
+          
+              //전체 슬라이드 컨테이너 넓이 설정
+              slides1.style.width = (slideWidth1 + slideMargin1) * slideCount1 + 'px';
+          
+              function moveSlide1(num) {
+              slides1.style.left = -num * 1500 + 'px';
+              currentIdx1 = num;
+              }
+          
+              prev1.addEventListener('click', function () {
+              /*첫 번째 슬라이드로 표시 됐을때는 
+              이전 버튼 눌러도 아무런 반응 없게 하기 위해 
+              currentIdx !==0일때만 moveSlide 함수 불러옴 */
+          
+              if (currentIdx1 !== 0) moveSlide1(currentIdx1 - 1);
+              });
+          
+              next1.addEventListener('click', function () {
+              /* 마지막 슬라이드로 표시 됐을때는 
+              다음 버튼 눌러도 아무런 반응 없게 하기 위해
+              currentIdx !==slideCount - 1 일때만 
+              moveSlide 함수 불러옴 */
+              if (currentIdx1 !== slideCount1/3 - 1) {
+                  moveSlide1(currentIdx1 + 1);
+              }
+              });
+          
+              const slides2 = document.querySelector('.slides2'); 
+              const slideImg2 = document.querySelectorAll('.slides2 li'); 
+              let currentIdx2 = 0; 
+              const slideCount2 = slideImg2.length;
+              const prev2 = document.querySelector('.prev2'); 
+              const next2 = document.querySelector('.next2'); 
+              const slideWidth2 = 500; 
+              const slideMargin2 = 100;
+          
+              
+              slides2.style.width = (slideWidth2 + slideMargin2) * slideCount2 + 'px';
+          
+              function moveSlide2(num) {
+              slides2.style.left = -num * 500 + 'px';
+              currentIdx2 = num;
+              }
+          
+              prev2.addEventListener('click', function () {
+          
+              if (currentIdx2 !== 0) moveSlide2(currentIdx2 - 1);
+              });
+          
+              next2.addEventListener('click', function () {
+          
+              if (currentIdx2 !== slideCount2/2) {
+                  moveSlide2(currentIdx2 + 1);
+              }
+              });
+
+              const slides3 = document.querySelector('.slides3'); 
+              const slideImg3 = document.querySelectorAll('.slides3 li'); 
+              let currentIdx3 = 0; 
+              const slideCount3 = slideImg3.length;
+              const prev3 = document.querySelector('.prev3'); 
+              const next3 = document.querySelector('.next3'); 
+              const slideWidth3 = 500; 
+              const slideMargin3 = 100;
+          
+              
+              slides3.style.width = (slideWidth3 + slideMargin3) * slideCount3 + 'px';
+          
+              function moveSlide3(num) {
+              slides3.style.left = -num * 500 + 'px';
+              currentIdx3 = num;
+              }
+          
+              prev3.addEventListener('click', function () {
+          
+              if (currentIdx3 !== 0) moveSlide3(currentIdx3 - 1);
+              });
+          
+              next3.addEventListener('click', function () {
+          
+              if (currentIdx3 !== slideCount3/2) {
+                  moveSlide3(currentIdx3 + 1);
+              }
+              });
+            </script>
+    </body>
+</html>

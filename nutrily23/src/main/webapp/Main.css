@@ -1,0 +1,796 @@
+@charset "UTF-8";@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html{
+    height:100%
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    /* overflow: hidden; */
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: #afdfc5;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container{
+    max-width: 90rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.logo-container{
+    /* flex: 1; */
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn{
+    flex: 3;
+    display: flex;
+}
+
+.nav-links{
+    flex: 3.5;
+}
+
+.log-sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.logo{
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 3rem;
+}
+
+.logo span{
+    font-weight: 300;
+}
+
+.btn{
+    display: inline-block;
+    padding: .5rem 1.3rem;
+    font-size: .8rem;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    line-height: 1;
+    margin: 0 .2rem;
+    transition: .3s;
+    text-transform: uppercase;
+}
+
+.btn.solid, .btn.transparent:hover{
+    background-color: #fff;
+    color: #afdfc5;
+}
+
+.btn.transparent, .btn.solid:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+.nav-links > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link{
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.nav-link > a{
+    line-height: 1.5rem;
+    color: #fff;
+    padding: 0 .8rem;
+    letter-spacing: 1px;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+    margin-top: 20px;
+}
+
+.nav-link > a > i{
+    margin-left: .2rem;
+}
+
+.nav-link:hover > a{
+    transform: scale(1.1);
+}
+
+.dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10rem;
+    transform: translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.dropdown ul{
+    position: relative;
+}
+
+.dropdown-link > a{
+    display: flex;
+    background-color: #fff;
+    color: #afdfc5;
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+.dropdown-link:hover > a{
+    background-color: #afdfc5;
+    color: #fff;
+}
+
+.dropdown-link:not(:nth-last-child(2)){
+    border-bottom: 1px solid #efefef;
+}
+
+.dropdown-link i{
+    transform: rotate(-90deg);
+}
+
+.arrow{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: -5.5px;
+    left: 32px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: .3s;
+    /* z-index: -1; */
+}
+
+.dropdown-link:first-child:hover ~ .arrow{
+    background-color: #afdfc5;
+}
+
+.dropdown-link{
+    position: relative;
+}
+
+.dropdown.second{
+    top: 0;
+    left: 100%;
+    padding-left: .8rem;
+    cursor: pointer;
+    transform: translateX(10px);
+}
+
+.dropdown.second .arrow{
+    top: 10px;
+    left: -5.5px;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown{
+    transform: translate(0, 0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hamburger-menu-container{
+    flex: 1;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hamburger-menu{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hamburger-menu div{
+    width: 1.6rem;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    position: relative;
+    /* z-index: 1001; */
+    transition: .5s;
+}
+
+.hamburger-menu div:before,
+.hamburger-menu div:after{
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.hamburger-menu div:before{
+    transform: translateY(-7px);
+}
+
+.hamburger-menu div:after{
+    transform: translateY(7px);
+}
+
+#check{
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    /* z-index: 90000; */
+    cursor: pointer;
+    opacity: 0;
+    display: none;
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div{
+    background-color: transparent;
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:before{
+    transform: translateY(0) rotate(-45deg);
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:after{
+    transform: translateY(0) rotate(45deg);
+}
+
+@keyframes animation{
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 920px){
+    .hamburger-menu-container{
+        display: flex;
+    }
+
+    #check{
+        display: block;
+    }
+
+    .nav-btn{
+        position: fixed;
+        height: calc(100vh - 3rem);
+        top: 3rem;
+        left: 0;
+        width: 100%;
+        background-color: #afdfc5;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transform: translateX(100%);
+        transition: .65s;
+    }
+
+    #check:checked ~ .nav-btn{
+        transform: translateX(0);
+    }
+
+    #check:checked ~ .nav-btn .nav-link,
+    #check:checked ~ .nav-btn .log-sign{
+        animation: animation .5s ease forwards var(--i);
+    }
+
+    .nav-links{
+        flex: initial;
+        width: 100%;
+    }
+
+    .nav-links > ul{
+        flex-direction: column;
+    }
+
+    .nav-link{
+        width: 100%;
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    .nav-link > a{
+        line-height: 1;
+        padding: 1.6rem 2rem;
+    }
+
+    .nav-link:hover > a{
+        transform: scale(1);
+        background-color: #afdfc5;
+    }
+
+    .dropdown, .dropdown.second{
+        position: initial;
+        top: initial;
+        left: initial;
+        transform: initial;
+        opacity: 1;
+        pointer-events: auto;
+        width: 100%;
+        padding: 0;
+        background-color: #afdfc5;
+        display: none;
+    }
+    
+    .nav-link:hover > .dropdown,
+    .dropdown-link:hover > .dropdown{
+        display: block;
+    }
+
+    .nav-link:hover > a > i,
+    .dropdown-link:hover > a > i{
+        transform: rotate(360deg);
+    }
+
+    .dropdown-link > a{
+        background-color: transparent;
+        color: #fff;
+        padding: 1.2rem 2rem;
+        line-height: 1;
+    }
+
+    .dropdown.second .dropdown-link > a{
+        padding: 1.2rem 2rem 1.2rem 3rem;
+    }
+
+    .dropdown.second .dropdown.second .dropdown-link > a{
+        padding: 1.2rem 2rem 1.2rem 4rem;
+    }
+
+    .dropdown-link:not(:nth-last-child(2)){
+        border-bottom: none;
+    }
+
+    .arrow{
+        /* z-index: 1; */
+        background-color: #afdfc5;
+        left: 10%;
+        transform: scale(1.1) rotate(45deg);
+        transition: .5s;
+    }
+
+    .nav-link:hover .arrow{
+        background-color: #afdfc5;
+    }
+
+    .dropdown .dropdown .arrow{
+        display: none;
+    }
+
+    .dropdown-link:hover > a{
+        background-color: #afdfc5;
+    }
+
+    .dropdown-link:first-child:hover ~ .arrow{
+        background-color: #afdfc5;
+    }
+
+    .nav-link > a > i{
+        font-size: 1.1rem;
+        transform: rotate(-90deg);
+        transition: .7s;
+    }
+
+    .dropdown i{
+        font-size: 1rem;
+        transition: .7s;
+    }
+
+    .log-sign{
+        flex: initial;
+        width: 100%;
+        padding: 1.5rem 1.9rem;
+        justify-content: flex-start;
+        opacity: 0;
+        transform: translateY(15px);
+    }
+}
+
+
+
+/* footer */
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+body{
+    margin: 0 auto;
+  }
+  .wrap{
+   width: 1440px;
+   margin: 0 auto;
+  }
+ .wrapper-section1, .wrapper-section2{
+   height: 700px;
+ }
+ .wrapper-title{
+   height: 150px;
+   display: flex;
+   align-items: center;
+ }
+ .title{
+   font-size: 40px;
+   margin-left: 20px;
+ }
+ .section1, .section2{
+   display: flex;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   text-align: center;
+   justify-content: space-between;
+   height: 70%;
+ }
+ .section1-1{
+   width: 60%;
+   margin: 20px;
+   display: flex;
+   align-items: center;
+   font-size: 30px;
+ }
+ .section1-2{
+   width: 40%;
+   border-radius: 10px;
+   margin: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+
+
+
+/* 페이지네이션 스타일 */
+ul,
+li {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+footer{
+    position: relative;
+    background-color: #afdfc5;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 100px; */
+    flex-direction: column;
+    bottom : 0;
+    /* transform : translateY(-100%); */
+}
+footer .social-icon, footer .menu_footer{
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+footer .social-icon li, footer .menu_footer li{
+    list-style: none;
+}
+footer .social-icon li a{
+
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transform: 0.5s;
+    text-decoration: none;
+
+}
+footer .social-icon li a:hover{
+    transform: translateY(-10px);
+}
+
+
+.fa-instagram:hover {
+    color: #dc2dff;
+}
+.fa-facebook:hover {
+    color: #3b5998;
+}
+.fa-youtube:hover {
+    color: #fa3c3c;
+}
+.fa-twitter:hover {
+    color: #29aafe;
+}
+
+footer .menu_footer li a{
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transform: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+}
+footer .menu_footer li a:hover{
+    opacity: 1;
+}
+footer p{
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    opacity: 0.7;
+}
+footer .wave {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: url('wave.png');
+    background-size: 1000px 50px;
+    filter: brightness(0); /* Apply brightness(0) to make the image black */
+    opacity: 0.5; 
+}
+footer .wave#wave1{
+    opacity: 0.91;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+@media (max-width: 900px){
+    footer .wave {
+        background-size: 500px 50px;
+    }
+}
+/* 보여줄 구간의 높이와 넓이 설정 */
+#slideShow{
+  width: 1440px;
+  height: 400px;
+  position: relative;
+  margin: 30px auto;
+  overflow: hidden;   
+  /*리스트 형식으로 이미지를 일렬로 
+  정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은
+  hidden으로 숨겨줘야됨*/
+}
+
+
+.slides{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2500px; /* 슬라이드할 사진과 마진 총 넓이 */
+  transition: left 0.5s ease-out; 
+  /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+}
+
+/* 첫 번째 슬라이드 가운데에 정렬하기위해
+첫번째 슬라이드만 margin-left조정 */
+.slides li:first-child{
+  margin-left: 20px;
+}
+
+/* 슬라이드들 옆으로 정렬 */
+.slides li:not(:last-child){
+  float: left;
+  margin-right: 100px;
+}
+
+.slides li{
+  float: left;
+  
+}
+
+
+.slides1{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2500px; /* 슬라이드할 사진과 마진 총 넓이 */
+  transition: left 0.5s ease-out; 
+  /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+}
+
+/* 첫 번째 슬라이드 가운데에 정렬하기위해
+첫번째 슬라이드만 margin-left조정 */
+.slides1 li:first-child{
+  margin-left: 20px;
+}
+
+/* 슬라이드들 옆으로 정렬 */
+.slides1 li:not(:last-child){
+  float: left;
+  margin-right: 100px;
+}
+
+.slides1 li{
+  float: left;
+}
+
+.slides2{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2500px; /* 슬라이드할 사진과 마진 총 넓이 */
+  transition: left 0.5s ease-out; 
+  /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+}
+
+/* 첫 번째 슬라이드 가운데에 정렬하기위해
+첫번째 슬라이드만 margin-left조정 */
+.slides2 li:first-child{
+  margin-left: 20px;
+}
+
+/* 슬라이드들 옆으로 정렬 */
+.slides2 li:not(:last-child){
+  float: left;
+  margin-right: 100px;
+}
+
+.slides2 li{
+  float: left;
+}
+.slides3{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2500px; /* 슬라이드할 사진과 마진 총 넓이 */
+  transition: left 0.5s ease-out; 
+  /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+}
+
+/* 첫 번째 슬라이드 가운데에 정렬하기위해
+첫번째 슬라이드만 margin-left조정 */
+.slides3 li:first-child{
+  margin-left: 20px;
+}
+
+/* 슬라이드들 옆으로 정렬 */
+.slides3 li:not(:last-child){
+  float: left;
+  margin-right: 100px;
+}
+
+.slides3 li{
+  float: left;
+}
+.controller span{
+  position:absolute;
+  margin: 0 10px;
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  border-radius: 50%;
+  padding: 7px 14px;
+  top: 50%;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+/* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */
+.controller span:hover{
+  background-color: rgb(230, 230, 230);
+}
+
+.prev{
+  left: 10px;
+}
+
+/* 이전 화살표에 마우스 커서가 올라가 있을때 
+이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
+.prev:hover{
+  transform: translateX(-10px);
+}
+
+.next {
+  right: 10px;
+}
+
+/* 다음 화살표에 마우스 커서가 올라가 있을때 
+이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
+.next:hover {
+  transform: translateX(10px);
+}
+
+.prev1{
+  left: 10px;
+}
+
+/* 이전 화살표에 마우스 커서가 올라가 있을때 
+이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
+.prev1:hover{
+  transform: translateX(-10px);
+}
+
+.next1 {
+  right: 10px;
+}
+
+/* 다음 화살표에 마우스 커서가 올라가 있을때 
+이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
+.next1:hover {
+  transform: translateX(10px);
+}
+.prev2{
+  left: 10px;
+}
+
+/* 이전 화살표에 마우스 커서가 올라가 있을때 
+이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
+.prev2:hover{
+  transform: translateX(-10px);
+}
+
+.next2 {
+  right: 10px;
+}
+
+/* 다음 화살표에 마우스 커서가 올라가 있을때 
+이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
+.next2:hover {
+  transform: translateX(10px);
+}
+.prev3{
+  left: 10px;
+}
+
+/* 이전 화살표에 마우스 커서가 올라가 있을때 
+이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
+.prev3:hover{
+  transform: translateX(-10px);
+}
+
+.next3 {
+  right: 10px;
+}
+
+/* 다음 화살표에 마우스 커서가 올라가 있을때 
+이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
+.next3:hover {
+  transform: translateX(10px);
+}
